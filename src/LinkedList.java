@@ -49,6 +49,21 @@ public class LinkedList {
 		
 	}
 	
+	public Language deleteFromBack() {
+		Language lang = null;
+		if(isEmpty()) {
+			System.out.println(
+					"List is empty");
+		}else {
+			Node prev = head;
+			Node current = head;
+			while(current.getLink() != null) {
+				
+			}
+		}
+		return lang;
+	}
+	
 	public void destroy() {
 		if(isEmpty()) {
 			System.out.println("List is empty");
