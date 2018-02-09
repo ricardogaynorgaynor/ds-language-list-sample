@@ -75,6 +75,20 @@ public class LinkedList {
 		return lang;
 	}
 	
+	public void insertAtFront(Language lang) {
+		if(isFull()) {
+			System.out.println("List is full");
+		}else {
+			Node temp = new Node(lang);
+			if(isEmpty()) {
+				head = temp;
+			}else {
+				temp.setLink(head);
+				head = temp;
+			}
+		}
+	}
+	
 	public void destroy() {
 		if(isEmpty()) {
 			System.out.println("List is empty");
