@@ -83,11 +83,14 @@ public class LinkedList {
 			if(isEmpty()) {
 				head = temp;
 			}else {
+				//let new node link to the current beginning of list
 				temp.setLink(head);
+				//let head store the address of the new node
 				head = temp;
 			}
 		}
 	}
+	
 	
 	public void destroy() {
 		if(isEmpty()) {
