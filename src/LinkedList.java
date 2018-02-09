@@ -91,6 +91,20 @@ public class LinkedList {
 		}
 	}
 	
+	public Language deleteFromFront() {
+		Language lang = null;
+		if(isEmpty()) {
+			System.out.println(
+					"List is empty");
+		}else {
+			Node current = head;
+			head = current.getLink();
+			lang = current.getData();
+			current = null;//delete current; <-- c++
+		}
+		return lang;
+	}
+	
 	
 	public void destroy() {
 		if(isEmpty()) {
