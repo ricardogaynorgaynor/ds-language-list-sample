@@ -47,7 +47,21 @@ public class LinkedList {
 			}
 		}
 		
-		
+	}
+	
+	public void destroy() {
+		if(isEmpty()) {
+			System.out.println("List is empty");
+		}else {
+			Node prev = head;
+			Node current = head;
+			while(current != null) {
+				prev = current;
+				current = current.getLink();
+				prev = null;// delete prev <-- C++
+			}
+			head = null;
+		}
 	}
 
 }
