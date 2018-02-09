@@ -55,11 +55,22 @@ public class LinkedList {
 			System.out.println(
 					"List is empty");
 		}else {
-			Node prev = head;
-			Node current = head;
-			while(current.getLink() != null) {
-				
-			}
+			//check if only one element in list
+            if(head.getLink()==null) {
+            	lang = head.getData();
+            	//delete head; <-- C++
+            	head = null;
+            }else {
+    			Node prev = head;
+    			Node current = head;
+    			while(current.getLink() != null) {
+    				prev = current;
+    				current = current.getLink();
+    			}
+    			prev.setLink(null);
+    			lang = current.getData(); //get data before deleting
+    			current = null;//delete current;            	
+            }
 		}
 		return lang;
 	}
